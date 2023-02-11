@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating animations and key frames 36</title>
+    <style>
+        .container {
+            background-color: yellowgreen;
+        }
+
+        .box {
+            background-color: green;
+            width: 250px;
+            height: 250px;
+            /* To make the position move on the page.we give the position as relative here. */
+            position: relative;
+            /* introduction of  animation properties in css. */
+            animation-name: Shubham-1;
+            animation-duration: 8s;
+            /* you can keep the iteration count as infinite also here.  */
+            /* you can use this in scroll bar or progress bar. */
+            animation-iteration-count: 1;
+            /* to make the changes retain there as previous we use forward here. */
+            /* animation-fill-mode: forwards; */
+
+            /* animation -fill-mode: alternate property will not apply changes after animation and takes its original shape as the animation completes */
+            /* animation-fill-mode: alternate; */
+            /* initially the animation movement is slow and at last it gets fast.in case of ease-in. */
+            /* animation-timing-function: ease-in; */
+
+            /* it means after a delay of 3s the animations start moving or showing action. */
+            /* animation-delay: 3s; */
+
+            /* the direction in case of alternate is forward movement whereas in case of reverse it is backward movement. */
+            /* animation-direction: alternate; */
+            /* animation-direction: reverse; */
+
+            /* animation shorthand way of writing content in one go. */
+             /* animation: animation-name animation-duration animation-timing-function animation-delay animation-iteration-count animation-fill-mode; */
+
+             /* So these properties can be set using this shorthand */
+            /* animation:Shubham-1 5s ease-in 1s 12 backwards;  */
+
+            animation-name: Shubham-2;
+        }
+
+        @keyframes Shubham-2 {
+            /* here we will see the changes of animations in terms of percentage covered in animations */
+            0%{
+                top: 0px;
+                left: 0px;
+            }
+            25%{
+                top:250px;
+                left: 0px;
+            }
+            75%{
+                top:250px;
+                left: 250px;
+            }
+            100%{
+                top: opx;
+                left: 250px;
+            }
+        }
+        /* animation ko add karne ke liye animation ka naam dena padhta hai and keyframes bhi banani padhti hai on top of that. */
+        @keyframes Shubham-1 {
+            from {
+                width: 200px;
+            }
+
+            to {
+                width: 400px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            This is a box
+        </div>
+    </div>
+</body>
+
+</html>
